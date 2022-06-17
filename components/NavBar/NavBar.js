@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { MenuItems } from './MenuItems';
 import './NavBar.css';
 import { Button } from '../Button'
@@ -21,8 +22,8 @@ export default class NavBar extends Component {
         <ul className={this.state.clicked ? 'NavMenu active' : 'NavMenu'}>
           {MenuItems.map((item, index) => {
             return (
-              <li key={index}>
-                <a className={item.cName} href={item.url}>
+              <li key={index} onClick={this.handleClick}>
+                <Link className={item.cName} to={item.url}>
                   {item.icon && (
                     <i
                       class={`fa fa-${item.icon} fa-fw`}
@@ -30,7 +31,7 @@ export default class NavBar extends Component {
                     ></i>
                   )}
                   {item.title}
-                </a>
+                </Link>
               </li>
             );
           })}
