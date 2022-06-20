@@ -15,7 +15,7 @@ export default class NavBar extends Component {
   render() {
     return (
       <nav className="NavBarItem">
-        <h1 className="NavBarLogo">React</h1>
+        <Link to="/"><h1 className="NavBarLogo">React</h1></Link>
         <div className="MenuIcon" onClick={this.handleClick}>
           <i className={this.state.clicked ? 'fa fa-times' : 'fa fa-bars'} aria-hidden="true"></i>
         </div>
@@ -26,7 +26,7 @@ export default class NavBar extends Component {
                 <Link className={item.cName} to={item.url}>
                   {item.icon && (
                     <i
-                      class={`fa fa-${item.icon} fa-fw`}
+                      className={`fa fa-${item.icon} fa-fw`}
                       aria-hidden="true"
                     ></i>
                   )}

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Project from './pages/Project';
+import ProjectDetails from './pages/ProjectDetails';
 import Contact from './pages/Contact';
 
 export default function App() {
@@ -17,12 +18,15 @@ export default function App() {
             {/* <Route exact path="/" component={Home} /> */}
             <Route exact path="/">
               <Home />
-            </Route>            
+            </Route>
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/projects">
+            <Route exact path="/projects">
               <Project />
+            </Route>
+            <Route path="/projects/:id">
+              <ProjectDetails />
             </Route>
             <Route path="/contact">
               <Contact />

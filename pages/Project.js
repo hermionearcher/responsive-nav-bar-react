@@ -1,12 +1,19 @@
-import { CodeIcon } from '@heroicons/react/solid';
+import { Link } from 'react-router-dom';
 import React from 'react';
 import { projects } from '../data/projectsData';
 
 const Project = () => {
   return (
-    <div className="project grid">
+    <div className="projectRow">
       {projects.map((project, index) => {
-        return <p key={index}>{project.title}</p>;
+        return (
+          <div className="projectSingle">
+            <Link className="projectSingleLink" to={`projects/${project.id}`}>
+              <img src={project.image}/>
+              <p key={index}>{project.title}</p>
+            </Link>
+          </div>
+        );
       })}
     </div>
   );

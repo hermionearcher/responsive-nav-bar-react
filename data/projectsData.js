@@ -1,5 +1,6 @@
 export const projects = [
   {
+    id: 1,
     title: "React Reserve",
     subtitle: "MERN Stack",
     description:
@@ -8,6 +9,7 @@ export const projects = [
     link: "https://reactbootcamp.com",
   },
   {
+    id: 2,
     title: "React Tracks",
     subtitle: "React and Python",
     description:
@@ -16,6 +18,7 @@ export const projects = [
     link: "https://reedbarger.com",
   },
   {
+    id: 3,
     title: "DevChat",
     subtitle: "React and Firebase",
     description:
@@ -24,6 +27,7 @@ export const projects = [
     link: "https://jsbootcamp.com",
   },
   {
+    id: 4,
     title: "Epic Todo App",
     subtitle: "React Hooks",
     description:
