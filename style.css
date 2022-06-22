@@ -8,29 +8,31 @@
 .projectRow {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: baseline;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  /* margin: 10vh; */
+  margin: 0;
+  padding: 0;
 }
 .projectSingle {
-  width: 33.33%;
+  width: 33vh;
+  height: 30vh;
   padding: 10px;
   box-shadow: 5px 10px 18px #888888;
   opacity: 0.6;
   transition: 0.5s ease-in-out;
   /* margin: 1px; */
+  margin: 0;
 }
 .projectSingle:hover {
   opacity: 1;
   cursor: pointer;
 }
 .projectRow img {
-  width: 80%;
+  width: 25vh;
+  height: 20vh;
   margin: auto;
   display: block;
-  object-fit:contain;
-  height: 20vh;
+  object-fit: contain;
 }
 .projectRow p {
   text-align: center;
